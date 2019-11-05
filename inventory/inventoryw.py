@@ -12,7 +12,7 @@ pipe = Popen(['getent', 'hosts'], stdout=PIPE, universal_newlines=True)
 result['all']['hosts'] = []
 for line in pipe.stdout.readlines():
    s = line.split()
-   if s[1].startswith('workstation'):
+   if s[1].startswith('control'):
       result['all']['hosts'].append(s[1])
 
 result['all']['vars'] = {}
